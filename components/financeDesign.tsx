@@ -58,9 +58,9 @@ export default function IndexPage() {
   }, []);
     
     return (
-        <div className='w-4/5 h-3/4 '>
+        <div className=' relative left-1/2 translate-x-[-50%] w-2/5 h-3/4 p-24 pt-0'>
 
-            <canvas className="relative left-1/2 translate-x-[-50%]"  ref={canvas}></canvas>
+            <canvas className=""  ref={canvas}></canvas>
             
         </div>
     )

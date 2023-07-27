@@ -1,19 +1,30 @@
 import Image from 'next/image'
 
 import FinanceDesign from '@/components/financeDesign'
+import { ThreePieChart } from '@/components/threeChartDesign'
+
 
 export default function Home() {
   return (
-    <main className="flex flex-col items-center h-screen justify-between p-24">
-      <div className="z-10 w-full max-w-5xl items-center justify-between text-sm lg:flex">
-        <div className='w-full text-center'>
-          <h3 className='font-bold text-7xl'>Tsant Finance </h3>
+    <main className="p-24 flex flex-col items-center h-screen justify-between ">
+      <div className='flex justify-between flex-col z-10 w-full text-center h-screen'>
+        <div className=" z-10 w-full  text-sm lg:flex">
+          <div className='  w-full text-center'>
+            <h3 className=' font-bold text-6xl'>Start Managing Your Money </h3>
+          </div>
+        </div>
+        <div className='h-4/5'>
+        <ThreePieChart height={"60%"} className={"w-full"}/>
+
         </div>
       </div>
-      <FinanceDesign/>
-      <div>
-
-        write a sign up join now thingy
+      <div className=' w-2/3 grid grid-cols-2'>
+        <button>
+          Helo
+        </button>
+        <button>
+          Helo
+        </button>
       </div>
     </main>
   )
