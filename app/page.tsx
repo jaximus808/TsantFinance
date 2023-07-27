@@ -9,11 +9,15 @@ export default function Home() {
   return (
     <main className="  items-center   ">
       
-      <div className='h-[60vh] z-10 w-full text-center h-3/4 bg-[#2C3259]'>
+      <div className='z-10 w-full text-center  bg-[#2C3259]'>
         <div className='w-full text-center'>
-          <h3 className=' font-bold text-6xl'>Start Managing Your Money </h3>
+          <h3 className='bg-[#0A0E28]  p-6 font-bold text-6xl'>Start Managing Your Money </h3>
         </div>
-        
+        <div className='border-[#DCB13C]  border-t-2 border-b-2 w-screen h-[60vh]'>
+          <Suspense>
+            <ThreePieChart  className={""}/>
+          </Suspense>
+        </div>
       </div>
       <div className='text-center w-full grid grid-cols-2'>
         <button>
@@ -23,11 +27,7 @@ export default function Home() {
           Helo
         </button>
       </div>
-      <div className='absolute left-0 top-0 w-screen h-screen'>
-        <Suspense>
-          <ThreePieChart  className={""}/>
-        </Suspense>
-      </div>
+      
     </main>
   )
 }

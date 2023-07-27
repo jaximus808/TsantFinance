@@ -16,9 +16,9 @@ export function ThreeObjects()
     const saveSection = useRef<any>(null);
     const wantSection = useRef<any>(null);
 
-    const [investTargetPos, setInvestTargetPos] = useState<THREE.Vector3>(new THREE.Vector3(0, 4.75,-13))
-    const [saveTargetPos, setSaveTargetPos] = useState<THREE.Vector3>(new THREE.Vector3(-0.2,5,-13))
-    const [wantTargetPos, setWantTargetPos] = useState<THREE.Vector3>(new THREE.Vector3(0.1,5.2,-13))
+    const [investTargetPos, setInvestTargetPos] = useState<THREE.Vector3>(new THREE.Vector3(-15, -0.15, -5))
+    const [saveTargetPos, setSaveTargetPos] = useState<THREE.Vector3>(new THREE.Vector3(-15.2,0,-5))
+    const [wantTargetPos, setWantTargetPos] = useState<THREE.Vector3>(new THREE.Vector3(-14.9,0.15,-5))
 
     const lerpSpeed = 1.5;
 
@@ -33,10 +33,10 @@ export function ThreeObjects()
     })
     //-5, 0,0
     return (
-        <>
-            <Invest20 ref={investSection} position={[5,0,2]} scale={1.2} rotation={[0,-Math.PI/2,Math.PI/2]}/>
-            <Save50 ref={saveSection} position={[-6.2,0,4]} scale={1.2} rotation={[0,-Math.PI/2,Math.PI/2]}/>
-            <Want30 ref={wantSection} position={[5,0,8]} scale={1.2}  rotation={[0,-Math.PI/2,Math.PI/2]}/>
-        </>
+        <group>
+            <Invest20 ref={investSection} position={[5,0,10]} scale={1.2} rotation={[0,-Math.PI/2,Math.PI/2]}/>
+            <Save50 ref={saveSection} position={[-6.2,0,15]} scale={1.2} rotation={[0,-Math.PI/2,Math.PI/2]}/>
+            <Want30 ref={wantSection} position={[5,0,20]} scale={1.2}  rotation={[0,-Math.PI/2,Math.PI/2]}/>
+        </group>
     )
 }

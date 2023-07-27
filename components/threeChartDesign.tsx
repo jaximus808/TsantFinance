@@ -36,7 +36,7 @@ export function ThreePieChart(props:any)
     // })
 
     return (
-            <Canvas className={props.className}    camera={{ zoom: 1, position: [0, 0, 5] }}>
+            <Canvas className={props.className}  shadows={true}  camera={{ zoom: 1, position: [0, 0, 5] }}>
               
               <ambientLight color="lightblue"intensity={0.1}></ambientLight>
                 {/* <pointLight intensity={1} color="#cc00cc"position={[10, 10, -3]} /> */}
