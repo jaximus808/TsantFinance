@@ -27,3 +27,8 @@ body {
     rgb(var(--background-start-rgb)); */
     background-color: black;
 }
+/* 
+canvas
+{background: rgb(67,40,85);
+  background: radial-gradient(circle, rgba(67,40,85,1) 0%, rgba(138,56,186,1) 74%);
+} */

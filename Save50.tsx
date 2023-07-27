@@ -4,7 +4,7 @@ Command: npx gltfjsx@6.2.10 ./assets/save50.gltf -t
 */
 
 import * as THREE from 'three'
-import React, { useRef,forwardRef } from 'react'
+import React, { useRef } from 'react'
 import { useGLTF } from '@react-three/drei'
 import { GLTF } from 'three-stdlib'
 
@@ -17,13 +17,13 @@ type GLTFResult = GLTF & {
   }
 }
 
-export const Save50 = forwardRef(function Save50(props: JSX.IntrinsicElements['group'], ref:any) {
+export function Model(props: JSX.IntrinsicElements['group']) {
   const { nodes, materials } = useGLTF('/save50.gltf') as GLTFResult
   return (
-    <group {...props} ref={ref} dispose={null}>
-      <mesh geometry={nodes['50save'].geometry} material={materials['Material.001']} position={[-0.007, 0, -0.43]} scale={[5.2, 0.132, 5.2]} />
+    <group {...props} dispose={null}>
+      <mesh geometry={nodes['50save'].geometry} material={materials['Material.001']} position={[-0.007, 0, -0.43]} scale={[1.969, 0.132, 1.969]} />
     </group>
   )
-})
+}
 
 useGLTF.preload('/save50.gltf')
