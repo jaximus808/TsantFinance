@@ -14,9 +14,15 @@ export default function Home() {
           <h3 className='bg-[#0A0E28]  p-6 font-bold text-6xl'>Start Managing Your Money </h3>
         </div>
         <div className='border-[#DCB13C]  border-t-2 border-b-2 w-screen h-[60vh]'>
-          <Suspense>
-            <ThreePieChart  className={""}/>
-          </Suspense>
+          <div className='h-full relative right-1/4'>
+            <Suspense>
+              <ThreePieChart  className={""}/>
+            </Suspense>
+            
+          </div>
+          <div>
+            hello
+          </div>
         </div>
       </div>
       <div className='text-center w-full grid grid-cols-2'>

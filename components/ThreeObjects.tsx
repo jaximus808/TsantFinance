@@ -16,9 +16,9 @@ export function ThreeObjects()
     const saveSection = useRef<any>(null);
     const wantSection = useRef<any>(null);
 
-    const [investTargetPos, setInvestTargetPos] = useState<THREE.Vector3>(new THREE.Vector3(-15, -0.15, -5))
-    const [saveTargetPos, setSaveTargetPos] = useState<THREE.Vector3>(new THREE.Vector3(-15.2,0,-5))
-    const [wantTargetPos, setWantTargetPos] = useState<THREE.Vector3>(new THREE.Vector3(-14.9,0.15,-5))
+    const [investTargetPos, setInvestTargetPos] = useState<THREE.Vector3>(new THREE.Vector3(0, -0.15, -5))
+    const [saveTargetPos, setSaveTargetPos] = useState<THREE.Vector3>(new THREE.Vector3(-0.2,0,-5))
+    const [wantTargetPos, setWantTargetPos] = useState<THREE.Vector3>(new THREE.Vector3(0.1,0.15,-5))
 
     const lerpSpeed = 1.5;
 
