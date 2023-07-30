@@ -6,16 +6,40 @@ Command: npx gltfjsx@6.2.10 ./assets/save50.gltf -t
 import * as THREE from 'three'
 import React, { useRef,forwardRef } from 'react'
 import { GLTF } from 'three-stdlib'
+import { useFrame } from '@react-three/fiber'
+
+
 
 
 
 export const Lighting = (props:any) => {
   
+
+  const lightOne = useRef<any>(null);
+  const lightTwo = useRef<any>(null);
+
+  const angle = useRef(0)
+
+  const radius = 10; 
+
+  const rotSpeed = -20*Math.PI/180
+
+  useFrame((state, delta)=>
+  {
+    angle.current += rotSpeed* delta;
+
+    lightOne.current.position.x = Math.cos(angle.current)*radius
+    lightOne.current.position.y = Math.sin(angle.current)*radius
+
+    lightTwo.current.position.x = Math.cos(angle.current + Math.PI)*radius
+    lightTwo.current.position.y = Math.sin(angle.current + Math.PI)*radius
+  })
+
   return (
     <group>
-        <pointLight intensity={1} color="cc00cc" position={[-10, 10, 2]} /> 
+        <pointLight ref={lightOne} intensity={1} color="cc00cc" position={[-10, 0, 2]} /> 
 
-        <pointLight intensity={1}  color="cc00cc" position={[10, -10, 2]} /> 
+        <pointLight ref={lightTwo} intensity={1}  color="cc00cc" position={[10, 0, 2]} /> 
     </group>
 
   )

@@ -4,8 +4,11 @@ import type { Metadata } from 'next'
 import { Raleway } from 'next/font/google'
 
 const raleway = Raleway({
-  weight:'400',
+  weight:['700','400'],
   subsets:['latin'],
+  style: ['normal', 'italic'],
+  
+  
   variable: '--font-raleway'
 })
 
